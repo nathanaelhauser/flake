@@ -1,3 +1,3 @@
 const Sequelize = require('sequelize')
 
-module.exports = new Sequelize('mysql://root:groot@localhost/flake_db')
+module.exports = new Sequelize(process.env.NODE_ENV ? process.env.JAWSDB_URL : process.env.LOCAL_URL)
