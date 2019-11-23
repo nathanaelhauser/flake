@@ -1,5 +1,5 @@
 const React = require('react')
-
+require= ('./home')
 
 module.exports = props => {
     return (

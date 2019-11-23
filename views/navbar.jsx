@@ -1,5 +1,5 @@
 const React = require('react')
-require = ('./Layout')
+const Layout = require('./Layout')
 
 module.exports = props => {
 
