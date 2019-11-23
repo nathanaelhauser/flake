@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../config')
 
 // table variables, require statement, (sequelize, Model, DataTypes)
-const Excuse = require('./Excuse.js')(sequelize, Model, Datatypes)
+const Excuse = require('./Excuse.js')(sequelize, Model, DataTypes)
 const Event = require('./Event.js')(sequelize, Model, DataTypes)
 const User = require('./User.js')(sequelize, Model, DataTypes)
 
