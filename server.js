@@ -15,6 +15,6 @@ app.engine('jsx', require('express-react-views').createEngine())
 require('./routes')(app)
 
 // {force: true}
-db.sync()
+db.sync({ force: true })
   .then(() => app.listen(process.env.PORT || 3000))
   .catch(e => console.log(e))
