@@ -1,3 +1,9 @@
-// Create Excuse form
+const getExcuses = _ => {
+  axios.get('/excuses/:userid')
+    .then(excuses => {
+      console.log(excuses)
+    })
+    .catch(e => console.error(e))
+}
 
-//Create Event form
+getExcuses()
