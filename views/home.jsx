@@ -1,11 +1,11 @@
 const React = require ('react')
 const Layout = require ('./Layout')
-const Navbar = require ('./navbar')
+
 
 module.exports = props => {
     return(
     <Layout>
-     <Navbar/>   
+     
 <div class="dropdown-menu">
   <form class="px-4 py-3">
     <div class="form-group">
