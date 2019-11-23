@@ -25,6 +25,9 @@ module.exports = props => {
           <li className="nav-item">
             <a className="nav-link" href="#">Excuses</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
         </ul>
         
     
