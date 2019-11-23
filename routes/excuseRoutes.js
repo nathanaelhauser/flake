@@ -1,3 +1,5 @@
+const { Excuse } = require('../models')
+
 module.exports = app => {
 
   app.get('excuses', (req, res) => {
