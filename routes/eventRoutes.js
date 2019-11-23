@@ -9,6 +9,20 @@ module.exports = app => {
       .catch(e => console.error(e))
   })
 
+  // GET events for specific user
+  app.get('/events/user/:id', (req, res) => {
+    Event.findAll({ include: Excuse, where: { userId: req.params.id }})
+      .then(events => res.json(events))
+      .catch(e => console.log(e))
+  })
+
+  // GET events for specific excuse
+  app.get('/events/excuse/:id', (req, res) => {
+    Event.findAll({ include: Excuse, where: { excuseId: req.params.id }})
+      .then(events => res.json(events))
+      .catch(e => console.log(e))
+  })
+
   // POST one event (create)
   app.post('/events', (req, res) => {
     Event.create(req.body)
