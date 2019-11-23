@@ -16,7 +16,9 @@ module.exports = props => {
         <body>
             {props.children}
 
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src=""></script>
         </body>
         </html>
     )
