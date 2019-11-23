@@ -16,8 +16,7 @@ module.exports = props => {
             <title>Welcome to Flake</title>
         </head>
         <body>
-
-
+            
             {props.children}
 
 
@@ -26,7 +25,7 @@ module.exports = props => {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src=""></script>
+        <script src="./app.js"></script>
         </body>
         </html>
     )
