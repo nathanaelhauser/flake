@@ -4,4 +4,8 @@ module.exports = app => {
     res.render('home')
   })
 
+  app.get('/', (req, res) => {
+    res.render('about')
+  })
+
 }
