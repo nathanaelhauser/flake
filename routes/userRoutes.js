@@ -2,26 +2,30 @@ const { User } = require('../models')
 
 module.exports = app => {
 
-  app.get('users', (req, res) => {
+  // GET all users (read)
+  app.get('/users', (req, res) => {
     User.findAll()
       .then(users => res.json(users))
       .catch(e => console.error(e))
   })
 
-  app.post('users', (req, res) => {
+  // POST one user (create)
+  app.post('/users', (req, res) => {
     User.create(req.body)
       .then(() => res.sendStatus(200))
       .catch(e => console.error(e))
   })
 
-  app.put('users/:id', (req, res) => {
+  // PUT one user (update)
+  app.put('/users/:id', (req, res) => {
     User.findOne({ where: { id: parseInt(req.params.id) } })
       .then(user => user.update({ isDone: !user.isDone}))
       .then(() => res.sendStatus(200))
       .catch(e => console.error(e))
   })
 
-  app.delete('users/:id', (req, res) => {
+  // DELETE one user (delete)
+  app.delete('/users/:id', (req, res) => {
     User.findOne({ where: { id: parseInt(req.params.id) } })
       .then(user => user.destroy())
       .then(() => res.sendStatus(200))

@@ -4,9 +4,9 @@ module.exports = (sequelize, Model, DataTypes) => {
     class User extends Model { }
 
     User.init({
-        userId: DataTypes.INTEGER,
+        // user id automatically generated
         username: DataTypes.STRING,
-        }, { sequelize, modelName: 'user' })
+    }, { sequelize, modelName: 'user' })
 
     return User
 }
