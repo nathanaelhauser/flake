@@ -15,5 +15,8 @@ module.exports = app => {
   app.get('/Calendar',(req, res) => {
     res.render('Calendar')
   })
+  app.get('/test',(req, res) => {
+    res.render('test')
+  })
 
 }
