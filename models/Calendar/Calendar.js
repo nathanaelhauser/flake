@@ -2,11 +2,11 @@ const fs = require('fs')
 const readline = require('readline')
 const { google } = require('googleapis')
 
-const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
+const SCOPES = ['https://www.googleapis.com/auth/calendar']
 
 const TOKEN_PATH = 'token.json'
 
-fs.readFile('credentials.json', (err, data) => {
+fs.readFile('creds.json', (err, data) => {
   if (err) {
     console.log('Error loading client secret file: ', err)
   }
