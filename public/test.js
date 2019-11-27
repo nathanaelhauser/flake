@@ -1,13 +1,27 @@
+// Loading googleapi js file
+let script = document.createElement('script')
+script.src = "https://apis.google.com/js/api.js"
+script.onload = function() {
+  script.onload = function() {}
+  handleClientLoad()
+}
+document.body.appendChild(script)
+window.onreadystatechange = function () {
+  if (this.readyState === 'complete') {
+    script.onload()
+  }
+}
+
 // Client ID and API key from the Developer Console
-      var CLIENT_ID = '998073850415-uh2b92tttja61k126kc9vj758j2mboj8.apps.googleusercontent.com';
-      var API_KEY = 'AIzaSyCrnmovziDPWdxwt9RqnNuGtzKXqKMm_k4';
+      var CLIENT_ID = '116685853039-js0avd7jre5dsa0uei33vb8q3plfoqpp.apps.googleusercontent.com';
+      var API_KEY = 'AIzaSyCm6QePZuL9NTUj3fvSoOrPb-RmIHdCfvU';
 
       // Array of API discovery doc URLs for APIs used by the quickstart
       var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
 
       // Authorization scopes required by the API; multiple scopes can be
       // included, separated by spaces.
-      var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+      var SCOPES = "https://www.googleapis.com/auth/calendar";
 
       var authorizeButton = document.getElementById('authorize_button');
       var signoutButton = document.getElementById('signout_button');
