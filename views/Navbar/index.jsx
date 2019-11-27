@@ -2,8 +2,7 @@ const React = require('react')
 
 module.exports = props => {
   return(
-<nav className="navbar navbar-light navbar-1 white">
-
+    <nav className="navbar navbar-light navbar-1 peach-gradient">
     
         <a className="navbar-brand" href="#">Flake</a>
       
