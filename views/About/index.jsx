@@ -22,15 +22,15 @@ module.exports = props => {
           </div>
         </div>
       </div>
-      <AboutCard name="Nathan" description="" image="https://ca.slack-edge.com/TKAFG5QD9-ULXR8AFUZ-c9a095d1d510-512" />
+      <AboutCard name="Nathan" excuse="Yea...about dinner, it's raining...so I'm gonna pass." image="https://ca.slack-edge.com/TKAFG5QD9-ULXR8AFUZ-c9a095d1d510-512" role="GitHub Master"/>
     <br/>
-      <AboutCard name="Mercedes" description="" image="https://ca.slack-edge.com/TKAFG5QD9-ULY02C8P8-3d1863e1b1ef-512" />
+      <AboutCard name="Mercedes" excuse="Sorry I can't make it. I ate a breakfast burrito and now I can't move." image="https://ca.slack-edge.com/TKAFG5QD9-ULY02C8P8-3d1863e1b1ef-512" role="Backend Dev"/>
     <br/>
-      <AboutCard name="Maverick" description="" image="https://ca.slack-edge.com/TKAFG5QD9-ULJEQ5WAX-03a5b4778309-512" />
+      <AboutCard name="Maverick" excuse="Bro, Uber Surge Pricing is like 4.6x right now.  Can't make it." image="https://ca.slack-edge.com/TKAFG5QD9-ULJEQ5WAX-03a5b4778309-512" role="Backend Dev"/>
     <br/>
-      <AboutCard name="Arturo" description="" image="https://ca.slack-edge.com/TKAFG5QD9-ULMK37M6G-f205369b1b63-512" />
+      <AboutCard name="Arturo" excuse="Sorry I have to cancel... I'm too depressed about the state of the world to go out." image="https://ca.slack-edge.com/TKAFG5QD9-ULMK37M6G-f205369b1b63-512" role="Frontend Dev"/>
     <br/>
-      <AboutCard name="Kevin" description="" image="https://ca.slack-edge.com/TKAFG5QD9-ULPF1509X-39abf41164e2-512"/>
+      <AboutCard name="Kevin" excuse="My dog, cat, and I are all throwing up right now!" image="https://ca.slack-edge.com/TKAFG5QD9-ULPF1509X-39abf41164e2-512" role="Frontend Dev"/>
 
     </Layout>
     
