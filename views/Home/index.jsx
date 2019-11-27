@@ -13,10 +13,8 @@ module.exports = props =>{
   <img className="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0yEcfsVHd-ff_EyYJV1P0WVDDHJuDBdqQUs6Zu4fux5u4F9vSww&s" alt="Card image cap"/>
 
   <div className="card-body">
-    <h5 className="card-title">Card with stretched link</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-      content.</p>
-    <a href="https://mdbootstrap.com/education/bootstrap/quick-start/" className="stretched-link">Go somewhere</a>
+    <h5 className="card-title">Create Excuse</h5>
+    <a href="http://localhost:3009/Excuses" className="stretched-link">Go somewhere</a>
   </div>
 </div></div>
     <div className="col-md-6"><div className="card">
