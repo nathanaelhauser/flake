@@ -11,10 +11,10 @@ module.exports = props => {
           </a>
         </div>
         <div class="card-body card-body-cascade">
-          <h5 class="pink-text pb-2 pt-1"><i class="fas fa-utensils"></i> Culinary</h5>
-  <h4 class="font-weight-bold card-title">{props.name}</h4>
-  <p class="card-text">{props.description}</p>
-          <a class="btn btn-unique">Button</a>
+          <h5 class="orange-text pb-2 pt-1"><i class="fas fa-code"></i> {props.role}</h5>
+          <h4 class="teal-text font-weight-bold card-title">{props.name}</h4>
+          <p class="card-text">{props.excuse}</p>
+          {/* <a class="btn btn-unique">Button</a> */}
         </div>
       </div>
     </div>
