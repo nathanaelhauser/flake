@@ -5,6 +5,7 @@ module.exports = (sequelize, Model, DataTypes) => {
 
     Event.init({
         // userId and excuseId pulled from User.js and Excuse.js
+        // ^ works with associations in models/index.js
         userId: DataTypes.INTEGER,
         excuseId: DataTypes.INTEGER,
         event: DataTypes.STRING
