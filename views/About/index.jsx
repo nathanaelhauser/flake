@@ -14,6 +14,7 @@ module.exports = props => {
           </div>
         </div>
       </div>
+      <br/>
       <div className="container">
         <div className="row">
           <div className="col">
