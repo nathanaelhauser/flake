@@ -23,7 +23,7 @@ module.exports = props =>{
   <div className="card-body">
     <h5 className="card-title">View Upcoming Events</h5>
 
-    <a href="https://mdbootstrap.com/education/bootstrap/quick-start/" className="stretched-link">Go somewhere</a>
+    <a href="http://localhost:3009/Calendar" className="stretched-link">Go somewhere</a>
   </div>
 </div></div>
 
