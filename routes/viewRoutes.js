@@ -1,7 +1,7 @@
 module.exports = app => {
 
   app.get('/', (req, res) => {
-    res.render('test')
+    res.render('index')
   })
 
   app.get('/About', (req, res) => {
