@@ -1,11 +1,19 @@
 module.exports = app => {
 
   app.get('/', (req, res) => {
-    res.render('home')
+    res.render('index')
   })
 
-  app.get('/about', (req, res) => {
-    res.render('about')
+  app.get('/About', (req, res) => {
+    res.render('About')
+  })
+
+  app.get('/Excuses',(req, res) => {
+    res.render('Excuses')
+  })
+
+  app.get('/Calendar',(req, res) => {
+    res.render('Calendar')
   })
 
 }
