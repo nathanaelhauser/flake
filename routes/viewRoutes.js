@@ -4,6 +4,10 @@ module.exports = app => {
     res.render('index')
   })
 
+  app.get('/Home', (req, res) => {
+    res.render('Home')
+  })
+
   app.get('/About', (req, res) => {
     res.render('About')
   })

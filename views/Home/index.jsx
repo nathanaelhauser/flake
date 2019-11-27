@@ -1,12 +1,14 @@
 const React = require('react')
 const Layout = require('../Layout')
 const Navbar = require('../Navbar')
+const SignIn = require('../SignIn')
 
 module.exports = props =>{
-    return (
+    return( 
         <Layout>
             <Navbar/>
+            <SignIn/>
+        </Layout>
 
-            </Layout>
     )
 }
