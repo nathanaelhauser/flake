@@ -6,16 +6,19 @@ module.exports = props => {
 
     <form>
       <p>
-        <h3> Hello! What are we skipping today?</h3>  
-        <label htmlFor="event">Event type:</label>
+        <h3>What're ya flakin' out on?</h3>  
+        <label htmlFor="event">Event type: </label>
+        <br/>
         <input type="text" name="event" id="event" />
       </p>
       <p>
         <label htmlFor="date">Date: </label>
+        <br/>
         <input type="date" name="date" id="date" />
       </p>
       <p>
-        <button id="addEvent">submit</button>
+        {/* pretty button */}
+        <button class="btn peach-gradient" id="addEvent">DITCH IT</button>
       </p>
     </form>
 </div>
