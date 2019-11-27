@@ -13,3 +13,20 @@ const getEventsForExcuse = id => {
     })
     .catch(e => console.error(e))
 }
+
+const getUsers = _ => {
+  axios.get('/users')
+    .then(users => {
+      console.log(users)
+    })
+    .catch(e => console.error(e))
+}
+
+const getExcuses = _ => {
+  axios.get('/excuses')
+    .then(excuses => {
+      console.log(excuses)
+    })
+    .catch(e => console.error(e))
+}
+
