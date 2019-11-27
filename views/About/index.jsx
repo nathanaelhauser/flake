@@ -6,6 +6,7 @@ module.exports = props => {
   return (
     <Layout>
     <Navbar/>
+      <br/>
       <div className="container">
         <div className="row">
           <div className="col">
