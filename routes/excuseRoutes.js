@@ -12,7 +12,9 @@ module.exports = app => {
   // POST one excuse (create)
   app.post('/excuses', (req, res) => {
     Excuse.create(req.body)
-      .then(() => res.sendStatus(200))
+      .then(excuse => {
+        res.json(excuse)
+      })
       .catch(e => console.error(e))
   })
 
