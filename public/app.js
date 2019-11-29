@@ -42,15 +42,15 @@ const getExcuses = _ => {
     })
     .catch(e => console.error(e))
 }
-document.getElementById("addExcuse").addEventListener("click", e => {
-  e.preventDefault()
-  axios.post('/excuses', {
-    excuse: document.getElementById('excuse').value,
-    severity: document.getElementById('severity').value
-  })
-  .then(({ data: excuse }) => {
-    document.getElementById('excuses').append(buildExcuse(excuse))
-    document.getElementById('excuse').value = ''
-  })
-})
+// document.getElementById("addExcuse").addEventListener("click", e => {
+//   e.preventDefault()
+//   axios.post('/excuses', {
+//     excuse: document.getElementById('excuse').value,
+//     severity: document.getElementById('severity').value
+//   })
+//   .then(({ data: excuse }) => {
+//     document.getElementById('excuses').append(buildExcuse(excuse))
+//     document.getElementById('excuse').value = ''
+//   })
+// })
 
