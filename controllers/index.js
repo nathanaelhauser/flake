@@ -6,3 +6,7 @@ const excuseTallies = eventArr => {
     return tallies
   }, [])
 }
+
+module.exports = {
+  Calendar: require('./calendarControllers')
+}

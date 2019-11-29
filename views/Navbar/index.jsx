@@ -1,9 +1,8 @@
 const React = require('react')
-const Layout = require('./Layout')
 
 module.exports = props => {
-
-    <nav className="navbar navbar-light navbar-1 white">
+  return(
+    <nav className="navbar navbar-light navbar-1 peach-gradient">
     
       
       <a className="navbar-brand" href="#">Navbar</a>
@@ -25,8 +24,8 @@ module.exports = props => {
           <li className="nav-item">
             <a className="nav-link" href="#">Excuses</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+          <li className="nav-item">
+            <a className="nav-link" href="#">About</a>
           </li>
         </ul>
         
@@ -35,5 +34,5 @@ module.exports = props => {
       
     
     </nav>
-    
+  )  
 }

@@ -1,0 +1,13 @@
+{
+  "web": {
+    "client_id": "116685853039-js0avd7jre5dsa0uei33vb8q3plfoqpp.apps.googleusercontent.com",
+    "project_id": "flake-1574579998159",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "CNVq32li69UhsS5wO1BV_g5i",
+    "javascript_origins": [
+      "http://localhost:3000"
+    ]
+  }
+}
