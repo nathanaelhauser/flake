@@ -1,5 +1,4 @@
 const React = require('react')
-const Layout = require('./Layout')
 
 module.exports = props => {
   return (
@@ -20,20 +19,17 @@ module.exports = props => {
     <html lang="en">
       <head>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-        <script src="https://apis.google.com/js/api:client.js"></script>
+        {/* <script src="https://apis.google.com/js/api:client.js"></script> */}
         <link rel="stylesheet" href="./test.css" />
       </head>
       <body>
-        <div id="gSignInWrapper">
-          <span className="label">Sign in with:</span>
-          <div id="customBtn" className="customGPlusSignIn">
-            <span className="icon"></span>
-            <span className="buttonText">Google</span>
-          </div>
+        <div id="customBtn">
+          <img src="https://img.icons8.com/clouds/100/000000/google-logo.png" id="google-icon" />
+          <span className="buttonText">Google</span>
         </div>
         <div id="name"></div>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="./test2.js"></script>
+        <script src="./test.js"></script>
       </body>
     </html>
 
