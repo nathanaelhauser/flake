@@ -21,6 +21,8 @@ module.exports = {
 
   async getEvents(tokens, calendarId = 'primary', maxResults = 10, orderBy = 'startTime') {
     let response = new Promise((resolve, reject) => {
+      console.log(tokens)
+      resolve('blah')
       client.setCredentials(tokens)
       const calendar = google.calendar({version: 'v3', client})
       calendar.events.list({
