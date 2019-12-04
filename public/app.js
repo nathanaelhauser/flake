@@ -68,9 +68,4 @@ const getExcuses = _ => {
 //   })
 // })
 
-//for the signIN modal
-document.getElementById('signin').addEventListener('click', e =>{
-    document.querySelector('signInModal').style.display= "flex"
-}) 
-
-
+// links for the navbar
