@@ -51,7 +51,7 @@ module.exports = {
 
   async getAuthURL(currentURL) {
     return await client.generateAuthUrl({
-      redirect_uri: `${currentURL}/calendar_events`,
+      redirect_uri: `${currentURL}calendar_events`,
       scope: SCOPES
     })
   }
