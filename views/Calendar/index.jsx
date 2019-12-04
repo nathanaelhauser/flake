@@ -14,9 +14,7 @@ module.exports = props => {
       <br/>
       <CalendarCard event="event"/>
 
-
     <br/>
-
 
     </Layout>
     
