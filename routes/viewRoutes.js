@@ -1,3 +1,5 @@
+const { User } = require('../controllers')
+
 module.exports = app => {
 
   app.get('/', (req, res) => {
@@ -5,6 +7,9 @@ module.exports = app => {
   })
 
   app.get('/Home', (req, res) => {
+    const accessCode = req.query['code']
+    const hotdog = User.createUser(accessCode)
+    console.log(hotdog)
     res.render('Home')
   })
 
@@ -20,7 +25,6 @@ module.exports = app => {
     res.render('Calendar')
   })
   app.get('/test',(req, res) => {
-    console.log(req.query['code'])
     res.render('test')
   })
 
