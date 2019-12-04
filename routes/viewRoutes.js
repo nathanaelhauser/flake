@@ -7,10 +7,9 @@ module.exports = app => {
   })
 
   app.get('/Home', (req, res) => {
-    const accessCode = req.query['code']
-    const hotdog = User.createUser(accessCode)
-    console.log(hotdog)
-    res.render('Home')
+    User.createGoogleUser(req.query['code'])
+      .then(userData => res.render('Home', userData))
+      .catch(e => console.log(e))
   })
 
   app.get('/About', (req, res) => {

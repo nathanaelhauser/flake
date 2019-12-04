@@ -43,7 +43,9 @@ module.exports = {
   async getAuthURL(currentURL) {
     return await client.generateAuthUrl({
       redirect_uri: `${currentURL}Home`,
-      scope: SCOPES
+      scope: SCOPES,
+      prompt: 'consent',
+      access_type: 'offline'
     })
   }
 
