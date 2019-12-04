@@ -17,4 +17,14 @@ module.exports = app => {
       .catch(e => console.log(e))
   })
 
+  app.post('/calendar_auth', (req, res) => {
+    console.log('getting autherization')
+    console.log(req.body.location)
+    Calendar.getAuthURL(req.body.location)
+      .then(authURL => {
+        res.send({authURL})
+      })
+      .catch(e => console.log(e))
+  })
+
 }
