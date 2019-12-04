@@ -1,3 +1,5 @@
+const { User } = require('../controllers')
+
 module.exports = app => {
 
   app.get('/', (req, res) => {
@@ -5,7 +7,9 @@ module.exports = app => {
   })
 
   app.get('/Home', (req, res) => {
-    res.render('Home')
+    User.createGoogleUser(req.query['code'])
+      .then(userData => res.render('Home', userData))
+      .catch(e => console.log(e))
   })
 
   app.get('/About', (req, res) => {
@@ -20,7 +24,6 @@ module.exports = app => {
     res.render('Calendar')
   })
   app.get('/test',(req, res) => {
-    console.log(req.query['code'])
     res.render('test')
   })
 

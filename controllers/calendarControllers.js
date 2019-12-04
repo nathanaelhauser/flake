@@ -1,6 +1,6 @@
 const { google } = require('googleapis')
 const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URL } = process.env
-const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
+const SCOPES = ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/calendar']
 const client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL)
 
 module.exports = {
@@ -42,8 +42,10 @@ module.exports = {
 
   async getAuthURL(currentURL) {
     return await client.generateAuthUrl({
-      redirect_uri: `${currentURL}calendar_events`,
-      scope: SCOPES
+      redirect_uri: `${currentURL}Home`,
+      scope: SCOPES,
+      prompt: 'consent',
+      access_type: 'offline'
     })
   }
 

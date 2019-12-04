@@ -9,6 +9,13 @@ module.exports = app => {
       .catch(e => console.error(e))
   })
 
+  // GET one user (read)
+  app.get('/users/:id', (req, res) => {
+    User.findOne({ where: { id: parseInt(req.params.id) } })
+      .then(user => res.json(user))
+      .catch(e => console.error(e))
+  })
+
   // POST one user (create)
   app.post('/users', (req, res) => {
     User.create(req.body)
