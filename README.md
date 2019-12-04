@@ -20,7 +20,7 @@
 
 **Technologies:**
 
-- HTML, CSS, JavaScript, Bootstrap, Express.js, Node.js, express-react-views, Sequelize, MySQL, Axios, Firebase
+- HTML, CSS, JavaScript, Bootstrap, Express.js, Node.js, express-react-views, Sequelize, MySQL, Axios, Google API
 
 ---
 
