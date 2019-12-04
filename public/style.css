@@ -22,3 +22,7 @@ position: relative;
 margin-left: 25%;
 }
 
+#landingPage{background-image: url("https://files.slack.com/files-pri/TKAFG5QD9-FR0A109TN/flakelogo.png");
+   height: 568px;
+    width: 320px;
+    position: auto;}
