@@ -16,16 +16,16 @@ module.exports = props => {
     
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+            <a className="nav-link" href="/#">Home <span className="sr-only">(current)</span></a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Calander</a>
+            <a id="calendarLink" className="nav-link" href="/calendar">Calender</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Excuses</a>
+            <a id="excusesLink" className="nav-link" href="/excuses">Excuses</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">About</a>
+            <a id="aboutLink" className="nav-link" href="/about">About</a>
           </li>
         </ul>
         
