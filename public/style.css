@@ -1,28 +1,36 @@
 .navbar.navbar-1 .navbar-toggler-icon {
-    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
-    }
+  background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+}
 
 .excuseHeader{
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .slider{
-    text-align: center;
+  text-align: center;
 }
 
 .slider1{
-    text-align: left;
+  text-align: left;
 }
 .slider5{
-    text-align: right;
+  text-align: right;
 }
 
 #customBtn{background-color:#F0C808;
-position: relative;
-margin-left: 25%;
+  position: relative;
+  margin-left: 25%;
 }
 
 #landingPage{background-image: url("https://files.slack.com/files-pri/TKAFG5QD9-FR0A109TN/flakelogo.png");
    height: 568px;
-    width: 320px;
-    position: auto;}
+   width: 320px;
+   position: auto;
+}
+
+#footer{
+   position: static;
+   bottom: 0;
+   width: 100%;
+}
+
