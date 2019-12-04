@@ -2,7 +2,9 @@ const React = require('react')
 const Layout = require('../Layout')
 const Navbar = require('../Navbar')
 const Form = require('../ExcuseForm')
-module.exports = props =>{
+const Footer = require('../Footer')
+
+module.exports = props => {
     return(
         <Layout>
             <Navbar/>
@@ -28,6 +30,7 @@ module.exports = props =>{
  <a href="#!" class="list-group-item list-group-item-action list-group-item-danger">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere praesentium voluptatum ipsa exercitationem necessitatibus libero quod neque atque aliquam, magnam explicabo error vitae repellat sed, voluptatem accusantium provident labore et.</a> 
 </div>
   </div> 
+    <Footer/>
         </Layout>
     )
 }
