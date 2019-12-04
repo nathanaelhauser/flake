@@ -54,3 +54,4 @@ const getExcuses = _ => {
 //   })
 // })
 
+// links for the navbar
