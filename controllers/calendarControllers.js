@@ -1,15 +1,6 @@
-/*
-
-https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly&response_type=code&client_id=116685853039-js0avd7jre5dsa0uei33vb8q3plfoqpp.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcalendar_events
-
-
-https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly&response_type=code&client_id=998073850415-0cmjdj8c1la7vhikn3rgohvq9ai74qom.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob
-
-
-*/
 const { google } = require('googleapis')
-const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URL, API_KEY } = process.env
-const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
+const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URL } = process.env
+const SCOPES = ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/calendar']
 const client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL)
 
 module.exports = {
@@ -17,7 +8,7 @@ module.exports = {
   async getTokens(code) {
     console.log('getting tokens')
     let response = new Promise((resolve, reject) => {
-      
+
       client.getToken(code)
         .then(({ tokens }) => {
           resolve(tokens)
@@ -33,9 +24,9 @@ module.exports = {
       console.log(tokens)
       client.setCredentials(tokens)
       console.log('set credentials')
-      const calendar = google.calendar({version: 'v3', auth: client})
+      const calendar = google.calendar({ version: 'v3', auth: client })
       console.log('created calendar')
-      
+
       calendar.events.list({
         calendarId: 'primary',
         timeMin: (new Date()).toISOString(),
@@ -47,6 +38,15 @@ module.exports = {
         .catch(e => reject(e))
     })
     return response
+  },
+
+  async getAuthURL(currentURL) {
+    return await client.generateAuthUrl({
+      redirect_uri: `${currentURL}Home`,
+      scope: SCOPES,
+      prompt: 'consent',
+      access_type: 'offline'
+    })
   }
 
 }

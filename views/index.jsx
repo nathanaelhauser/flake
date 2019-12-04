@@ -1,12 +1,13 @@
 const React = require ('react')
-const Layout = require ('./Layout')
-const Navbar = require('./Navbar')
-const SignIn = require('./Signin')
+const Layout = require ('./Layout2')
+
 module.exports = props => {
     return(
-    <Layout>
-    <Navbar/>
-    <SignIn/>
-    </Layout>
+      <Layout>
+
+         <button  id = "customBtn" type="button" className="btn btn-gplus"><i className="fab fa-google-plus-g pr-1"></i> Google +</button>
+
+      </Layout>
+
     )
 }
