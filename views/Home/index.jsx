@@ -7,6 +7,7 @@ module.exports = props =>{
         <Layout>
             <Navbar/>
             <div className = "container">
+              <br/>
 <h1>Hello!${} What would You like to do today?</h1> 
 <div className = "row">
 <div className="col-md-6"><div className="card">
