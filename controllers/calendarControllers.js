@@ -1,12 +1,3 @@
-/*
-
-https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly&response_type=code&client_id=116685853039-js0avd7jre5dsa0uei33vb8q3plfoqpp.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcalendar_events
-
-
-https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly&response_type=code&client_id=998073850415-0cmjdj8c1la7vhikn3rgohvq9ai74qom.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob
-
-
-*/
 const { google } = require('googleapis')
 const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URL } = process.env
 const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
