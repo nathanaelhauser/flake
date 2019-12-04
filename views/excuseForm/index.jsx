@@ -5,13 +5,13 @@ module.exports = props => {
     <div className="container">
 
       <div className="row">
-        <h1 className="excuseHeader">Add an Excuse</h1>
+        <h1 className="excuseHeader"> EXCUSES</h1>
       </div>
 
       <form>
         <p>
-          <h3>What're ya flakin' out on?</h3>
-          <label htmlFor="event">Event type: </label>
+          <h4>|| Add an event to your Google Calendar ||</h4>
+          <label htmlFor="event">Event: </label>
           <br />
           <input type="text" name="event" id="event" />
         </p>
@@ -22,8 +22,10 @@ module.exports = props => {
         </p>
         <p>
           {/* pretty button */}
-          <button className="btn peach-gradient" id="addEvent">DITCH IT</button>
+          <button className="btn peach-gradient" id="addEvent">Add event to calendar</button>
         </p>
+        <hr/>
+        <h4>|| Add an excuse to an event ||</h4>
         <div className="md-form">
           <input type="text" id="excuse" className="form-control mdb-autocomplete" />
           <label htmlFor="excuse" className="active">What is your excuse?</label>
@@ -40,14 +42,16 @@ module.exports = props => {
           </div>
           <input type="range" className="custom-range" min="1" max="5" id="severity" />
         </form>
-        <button className="btn peach-gradient" id="addExcuse">Add Excuse</button>
+        <button className="btn peach-gradient" id="addExcuse">Add excuse to an event</button>
       </form>
+      <hr/>
 
 
       <div className="row">
         <table>
           <thead>
             <th>Excuses</th>
+            <br/><br/>
             <th></th>
           </thead>
           <tbody id="excuses">
