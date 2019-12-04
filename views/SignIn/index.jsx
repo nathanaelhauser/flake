@@ -2,7 +2,7 @@ const React = require('react')
 
 module.exports = props => {
   return (
-    <div className="dropdown-menu">
+    <div id= "signInModal" className="dropdown-menu">
       <form className="px-4 py-3">
         <div className="form-group">
           <label htmlFor="exampleDropdownFormEmail1">Email address</label>

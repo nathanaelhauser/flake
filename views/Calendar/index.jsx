@@ -6,6 +6,7 @@ module.exports = props =>{
     return (
         <Layout>
             <Navbar/>
+
             </Layout>
     )
 }
