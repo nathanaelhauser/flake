@@ -1,6 +1,7 @@
 const React = require('react')
 const Layout = require('../Layout')
 const Navbar = require('../Navbar')
+const Footer = require('../Footer')
 const CalendarCard = require('../CalendarCard')
 
 module.exports = props => {
@@ -14,11 +15,7 @@ module.exports = props => {
       <br/>
       <CalendarCard event="event"/>
 
-
-    <br/>
-
-
-    </Layout>
-    
+            <Footer/>
+            </Layout>
   )
 }
