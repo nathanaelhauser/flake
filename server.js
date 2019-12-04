@@ -16,5 +16,5 @@ require('./routes')(app)
 
 // {force: true}
 db.sync({ force: true })
-  .then(() => app.listen(process.env.PORT || 3009))
+  .then(() => app.listen(process.env.PORT || 3005))
   .catch(e => console.log(e))
