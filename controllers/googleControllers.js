@@ -8,11 +8,13 @@ const client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL)
 module.exports = {
 
   async loginGoogleUser(code) {
-    let userID = ''
     let response = new Promise((resolve, reject) => {
+      // Using access code provided by google authURL
+      //  to REDIRECT_URL
       getTokens(code)
         .then(tokens => getUserInfo(tokens))
         .then(userData => {
+          // Change names of object keys to fit db naming
           const { id: google_id, name: username, picture, access_token, refresh_token, id_token, expiry_date } = userData
           const user = { google_id, username, picture, access_token, refresh_token, id_token, expiry_date: JSON.stringify(expiry_date) }
           return addUserToDB(user)
@@ -23,6 +25,7 @@ module.exports = {
     return response
   },
 
+  // Get an authURL from google
   async getAuthURL(currentURL) {
     return await client.generateAuthUrl({
       redirect_uri: `${currentURL}Home`,
@@ -32,10 +35,14 @@ module.exports = {
     })
   },
 
+  // Get calendar events from google calendar using
+  //  oauth2 tokens
   async getCalendarEvents(tokens) {
     let response = new Promise((resolve, reject) => {
+      // Tokens required for oauth2
       client.setCredentials(tokens)
       const calendar = google.calendar({ version: 'v3', auth: client })
+      // Get events from calendar api
       calendar.events.list({
         calendarId: 'primary',
         timeMin: (new Date()).toISOString(),
@@ -49,6 +56,9 @@ module.exports = {
     return response
   },
 
+  // ------ Not working currently ------
+  // Check if access token stored in db is expired
+  //  if expired, then renew otherwise return
   async checkAccessToken(google_id) {
     let response = new Promise((resolve, reject) => {
       User.findOne({ where: { google_id }})
@@ -75,6 +85,8 @@ module.exports = {
 
 }
 
+// Using access code from google
+//  get oauth2 tokens from google
 const getTokens = async code => {
   console.log('getting tokens')
   let response = new Promise((resolve, reject) => {
@@ -87,6 +99,8 @@ const getTokens = async code => {
   return response
 }
 
+// Using oauth2 tokens, make google api call to
+//  get user profile info
 const getUserInfo = async tokens => {
   console.log('getting user info')
   let response = new Promise((resolve, reject) => {
@@ -97,21 +111,27 @@ const getUserInfo = async tokens => {
   return response
 }
 
+// Add user to db or update user in db
 const addUserToDB = async data => {
   let response = new Promise((resolve, reject) => {
     console.log(data)
+    // Try to find user in db using google_id
     User.findOne({ where: { google_id: data.google_id } })
       .then(user => {
+        // If user doesn't exist in db
         if (!user) {
           console.log('adding new user to db')
+          // Create new user in db
           User.create(user)
             .catch(e => reject(e))
         } else {
           console.log('user already in db')
+          // Update tokens for user in db
           const { access_token, refresh_token, expiry_date, id_token } = data
           user.update({ access_token, refresh_token, expiry_date, id_token })
             .catch(e => reject(e))
         }
+        // Send back google_id and username for Home page rendering
         resolve({ google_id: user.google_id, username: user.username })
       })
       .catch(e => reject(e))

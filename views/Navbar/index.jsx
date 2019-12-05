@@ -26,6 +26,7 @@ module.exports = props => {
           <li className="nav-item">
             <a className="nav-link" href="./About">About</a>
           </li>
+          {/* Link to sign out of google account on local session. */}
           <li className="nav-item">
             <a id="signout" className="nav-link" href="#">Sign Out</a>
           </li>
