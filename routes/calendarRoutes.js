@@ -1,14 +1,14 @@
-const { Calendar } = require('../controllers')
+const { CalendarControllers } = require('../controllers')
 
 module.exports = app => {
 
   // Get calendar events from google calendar api for user
   app.get('/calendar_events/', (req, res) => {
     console.log('inside calendar events')
-    Calendar.getTokens(req.query['code'])
+    CalendarControllers.getTokens(req.query['code'])
       .then(tokens =>{
         console.log('got tokens, getting events')
-        return Calendar.getEvents(tokens)
+        return CalendarControllers.getEvents(tokens)
       })
       .then(events => {
         console.log('got events, returning events')
@@ -20,7 +20,7 @@ module.exports = app => {
   app.post('/calendar_auth', (req, res) => {
     console.log('getting authorization')
     console.log(req.body.location)
-    Calendar.getAuthURL(req.body.location)
+    CalendarControllers.getAuthURL(req.body.location)
       .then(authURL => {
         res.send({authURL})
       })

@@ -8,6 +8,6 @@ const excuseTallies = eventArr => {
 }
 
 module.exports = {
-  Calendar: require('./calendarControllers'),
-  User: require('./userControllers')
+  CalendarControllers: require('./calendarControllers'),
+  UserControllers: require('./userControllers')
 }
