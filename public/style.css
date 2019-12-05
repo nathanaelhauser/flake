@@ -18,11 +18,11 @@
 }
 
 #customBtn{background-color:#F0C808;
-  position: relative;
-  margin-left: 25%;
+  position: fixed;
+  margin-left: 42px;
 }
 
-#landingPage{background-image: url("../assets/background_Orange.png");
+#landingPage{background-image: image ('../..Assets/background_Orange.png');
    height: 568px;
    width: 320px;
    position: auto;

@@ -1,6 +1,7 @@
 const React = require('react')
 const Layout = require('../Layout')
 const Navbar = require('../Navbar')
+const Footer = require('../Footer')
 
 module.exports = props => {
   return (
@@ -33,6 +34,7 @@ module.exports = props => {
       </div>
       <div id="tempStorage" data-google_id={props.google_id}></div>
       <script src="./storeID.js" />
+      <Footer/>
     </Layout>
 
   )
