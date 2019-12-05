@@ -5,6 +5,9 @@ module.exports = (sequelize, Model, DataTypes) => {
 
     User.init({
         // user id automatically generated
+
+        // all of the following columns provided
+        // by user logging into google account
         username: DataTypes.STRING,
         google_id: {
             type: DataTypes.STRING,

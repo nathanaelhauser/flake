@@ -8,6 +8,7 @@ module.exports = props => {
       <Navbar />
       <div className="container">
         <br />
+        {/* Use google username to greet client */}
         <h1>Hello {props.username}! What would You like to do today?</h1>
         <div className="row">
           <div className="col-md-6"><div className="card">
@@ -31,6 +32,7 @@ module.exports = props => {
 
         </div>
       </div>
+      {/* Passing google_id to client using empty div */}
       <div id="tempStorage" data-google_id={props.google_id}></div>
       <script src="./home.js" />
     </Layout>
