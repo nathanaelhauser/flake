@@ -97,17 +97,20 @@ const getUserInfo = async tokens => {
   return response
 }
 
-const addUserToDB = async user => {
+const addUserToDB = async data => {
   let response = new Promise((resolve, reject) => {
-    console.log(user)
-    User.findOne({ where: { google_id: user.google_id } })
-      .then(data => {
-        if (!data) {
+    console.log(data)
+    User.findOne({ where: { google_id: data.google_id } })
+      .then(user => {
+        if (!user) {
           console.log('adding new user to db')
           User.create(user)
             .catch(e => reject(e))
         } else {
           console.log('user already in db')
+          const { access_token, refresh_token, expiry_date, id_token } = data
+          user.update({ access_token, refresh_token, expiry_date, id_token })
+            .catch(e => reject(e))
         }
         resolve({ google_id: user.google_id, username: user.username })
       })

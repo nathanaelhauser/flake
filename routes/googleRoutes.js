@@ -1,4 +1,4 @@
-const { Google, Calendar } = require('../controllers')
+const { Google } = require('../controllers')
 const { User } = require('../models')
 
 module.exports = app => {
