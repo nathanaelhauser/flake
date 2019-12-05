@@ -3,7 +3,7 @@ document.addEventListener('click', e => {
   if (e.target.id === "customBtn") {
     console.log('customBtn')
     const location = window.location.href.replace('#', '')
-    axios.post(`${location}calendar_auth`, { location })
+    axios.post(`${location}google/auth`, { location })
       .then(({ data }) => {
         window.location = data.authURL
       })

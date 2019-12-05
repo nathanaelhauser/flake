@@ -8,6 +8,5 @@ const excuseTallies = eventArr => {
 }
 
 module.exports = {
-  Calendar: require('./calendarControllers'),
   Google: require('./googleControllers')
 }
