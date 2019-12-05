@@ -12,6 +12,10 @@ module.exports = app => {
       .catch(e => console.log(e))
   })
 
+  app.get('Home/:id', (req, res) => {
+    
+  })
+
   app.get('/About', (req, res) => {
     res.render('About')
   })
