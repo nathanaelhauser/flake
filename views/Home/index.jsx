@@ -32,7 +32,7 @@ module.exports = props => {
         </div>
       </div>
       <div id="tempStorage" data-google_id={props.google_id}></div>
-      <script src="./storeID.js" />
+      <script src="./home.js" />
     </Layout>
 
   )

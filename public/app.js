@@ -9,7 +9,15 @@ document.addEventListener('click', e => {
       })
       .catch(e => console.error(e))
   }
+
+  if (e.target.id === "signout") {
+    console.log('signing user out')
+    localStorage.removeItem('google_id')
+    window.location = `http://${window.location.host}`
+  }
 })
+
+
 
 
 

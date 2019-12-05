@@ -5,4 +5,5 @@ module.exports = app => {
   require('./eventRoutes.js')(app)
   require('./userRoutes.js')(app)
   require('./calendarRoutes.js')(app)
+  require('./googleRoutes')(app)
 }
