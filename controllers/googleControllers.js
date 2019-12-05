@@ -32,6 +32,23 @@ module.exports = {
     })
   },
 
+  async getCalendarEvents(tokens) {
+    let response = new Promise((resolve, reject) => {
+      client.setCredentials(tokens)
+      const calendar = google.calendar({ version: 'v3', auth: client })
+      calendar.events.list({
+        calendarId: 'primary',
+        timeMin: (new Date()).toISOString(),
+        maxResults: 10,
+        singleEvents: true,
+        orderBy: 'startTime'
+      })
+        .then(res => resolve(res.data.items))
+        .catch(e => reject(e))
+    })
+    return response
+  },
+
   async checkAccessToken(google_id) {
     let response = new Promise((resolve, reject) => {
       User.findOne({ where: { google_id }})
