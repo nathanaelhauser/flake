@@ -1,4 +1,5 @@
-const { User } = require('../controllers')
+const { Google } = require('../controllers')
+const { User } = require('../models')
 
 module.exports = app => {
 
@@ -7,9 +8,16 @@ module.exports = app => {
   })
 
   app.get('/Home', (req, res) => {
-    User.createGoogleUser(req.query['code'])
-      .then(userData => res.render('Home', userData))
-      .catch(e => console.log(e))
+    if (req.query['code']) {
+      Google.loginGoogleUser(req.query['code'])
+        .then(userData => res.render('Home', userData))
+        .catch(e => console.log(e))
+    } else {
+      User.findOne({ where: { google_id: req.query['google_id'] } })
+        .then(({ dataValues: userData }) => 
+          res.render('Home', userData))
+        .catch(e => console.log(e))
+    }
   })
 
   app.get('/About', (req, res) => {

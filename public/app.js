@@ -1,15 +1,30 @@
 document.addEventListener('click', e => {
-  console.log('click')
+  
+  // Login button on the index page
   if (e.target.id === "customBtn") {
     console.log('customBtn')
-    const location = window.location.href.replace('#', '')
-    axios.post(`${location}calendar_auth`, { location })
+    const location = `http://${window.location.host}/`
+    // Obtain a google authentication url by
+    //  posting current location to server at
+    //  google/auth route
+    axios.post(`${location}google/auth`, { location })
       .then(({ data }) => {
         window.location = data.authURL
       })
       .catch(e => console.error(e))
   }
+
+  // For any page with the navbar
+  //  if the signout link is clicked
+  if (e.target.id === "signout") {
+    console.log('signing user out')
+    localStorage.removeItem('google_id')
+    // Go back to index page
+    window.location = `http://${window.location.host}`
+  }
 })
+
+
 
 
 

@@ -6,7 +6,7 @@ module.exports = props => {
       <Layout>
 
          <button  id = "customBtn" type="button" className="btn btn-gplus"><i className="fab fa-google-plus-g pr-1"></i> Google +</button>
-
+        <script src="./index.js" />
       </Layout>
 
     )
