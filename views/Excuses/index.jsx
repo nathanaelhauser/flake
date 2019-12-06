@@ -30,6 +30,7 @@ module.exports = props => {
  <a href="#!" class="list-group-item list-group-item-action list-group-item-danger">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere praesentium voluptatum ipsa exercitationem necessitatibus libero quod neque atque aliquam, magnam explicabo error vitae repellat sed, voluptatem accusantium provident labore et.</a> 
 </div>
   </div> 
+  <br></br>
     <Footer/>
         </Layout>
     )

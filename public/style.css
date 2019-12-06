@@ -29,8 +29,17 @@
 }
 
 #footer{
-   position: static;
+   position: static; 
    bottom: 0;
    width: 100%;
 }
 
+#cardTitle{
+    text-align: center;
+    padding-top: 10px;
+}
+
+#main-container{
+    position: relative;
+    min-height: 100vh;
+}

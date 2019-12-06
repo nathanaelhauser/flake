@@ -6,16 +6,19 @@ const CalendarCard = require('../CalendarCard')
 
 module.exports = props => {
   return (
+    
     <Layout>
     <Navbar/>
       <br/>
-      <div className="container">
+      <div id ="main-container"className="container">
         <h1>Events</h1>
-      </div>
+    
       <br/>
       <CalendarCard event="event"/>
     <br/>
+      </div>
             <Footer/>
             </Layout>
+            
   )
 }
