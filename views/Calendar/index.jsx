@@ -7,6 +7,7 @@ const CalendarCard = require('../CalendarCard')
 module.exports = props => {
   return (
     <Layout>
+      <script src="./calendar.js" />
     <Navbar/>
       <br/>
       <div className="container">
