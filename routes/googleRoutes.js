@@ -5,6 +5,7 @@ module.exports = app => {
 
   // Get calendar events from google calendar api for user
   app.get('/google/calendar/:google_id', (req, res) => {
+    console.log(`${req.params.google_id}`)
     // Get oauth2 tokens from db using gooogle_id
     User.findOne({ where: { google_id: req.params.google_id } })
     // Using oauth2 tokens, get calendar events for user
