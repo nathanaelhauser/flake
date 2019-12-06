@@ -122,7 +122,7 @@ const addUserToDB = async data => {
         if (!user) {
           console.log('adding new user to db')
           // Create new user in db
-          User.create(user)
+          User.create(data)
             .catch(e => reject(e))
         } else {
           console.log('user already in db')
@@ -132,7 +132,7 @@ const addUserToDB = async data => {
             .catch(e => reject(e))
         }
         // Send back google_id and username for Home page rendering
-        resolve({ google_id: user.google_id, username: user.username })
+        resolve({ google_id: data.google_id, username: data.username })
       })
       .catch(e => reject(e))
   })
