@@ -28,11 +28,6 @@ document.addEventListener('click', e => {
   }
 })
 
-
-
-
-
-
 const buildExcuse = ({ id, excuse, severity }) => {
   let excuseElem = document.createElement('tr')
   excuseElem.innerHTML = `
@@ -90,3 +85,5 @@ const getExcuses = _ => {
 // })
 
 // links for the navbar
+
+
