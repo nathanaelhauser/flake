@@ -21,18 +21,36 @@ module.exports = app => {
   })
 
   app.get('/About', (req, res) => {
-    res.render('About')
+    if (req.query['google_id']) {
+      User.findOne({ where: { google_id: req.query['google_id'] }})
+        .then(({ dataValues: userData }) =>
+          res.render('About', userData))
+        .catch(e => console.log(e))
+    } else {
+      res.render('About')
+    }
   })
 
   app.get('/Excuses',(req, res) => {
-    res.render('Excuses')
+    if (req.query['google_id']) {
+      User.findOne({ where: { google_id: req.query['google_id'] }})
+        .then(({ dataValues: userData }) =>
+          res.render('Excuses', userData))
+        .catch(e => console.log(e))
+    } else {
+      res.render('Excuses')
+    }
   })
 
   app.get('/Calendar',(req, res) => {
-    res.render('Calendar')
-  })
-  app.get('/test',(req, res) => {
-    res.render('test')
+    if (req.query['google_id']) {
+      User.findOne({ where: { google_id: req.query['google_id'] }})
+        .then(({ dataValues: userData }) =>
+          res.render('Calendar', userData))
+        .catch(e => console.log(e))
+    } else {
+      res.render('Calendar')
+    }
   })
 
 }

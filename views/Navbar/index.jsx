@@ -15,16 +15,16 @@ module.exports = props => {
 
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a id="homeLink" className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+            <a className="homeLink nav-link" href="#">Home <span className="sr-only">(current)</span></a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="./Calendar">Calendar</a>
+            <a className="calendarLink nav-link" href="#">Calendar</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="./Excuses">Excuses</a>
+            <a className="excusesLink nav-link" href="#">Excuses</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="./About">About</a>
+            <a className="aboutLink nav-link" href="#">About</a>
           </li>
           {/* Link to sign out of google account on local session. */}
           <li className="nav-item">
