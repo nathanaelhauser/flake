@@ -16,7 +16,7 @@ module.exports = props => {
 
             <div className="card-body">
               <h5 className="card-title">Create Excuse</h5>
-              <a href="#" className="excusesLink stretched-link">Go somewhere</a>
+              <a href="/Excuses" className="excusesLink stretched-link">Go somewhere</a>
             </div>
           </div>
         </div>
@@ -24,9 +24,9 @@ module.exports = props => {
             <img className="card-img-top" src="https://images.idgesg.net/images/article/2019/04/google-calendar-android-100794956-large.jpg" alt="calpic" />
 
             <div className="card-body">
-              <h5 className="card-title">View Upcoming Events</h5>
+              <h5 className="card-title">View Upcoming Excuses</h5>
 
-              <a href="#" className="calendarLink stretched-link">Go somewhere</a>
+              <a href="/Calendar" className="calendarLink stretched-link">Go somewhere</a>
             </div>
           </div></div>
 

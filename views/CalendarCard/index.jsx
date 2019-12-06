@@ -13,8 +13,8 @@ module.exports = props => {
                 {
                     
                 }
-                <a href="#!" class="orange-text d-flex flex-row-reverse p-2">
-                <h5 className="waves-effect waves-light">Add an excuse<i class="fas fa-angle-double-right ml-2"></i></h5>
+                <a href="#!" className="orange-text d-flex flex-row-reverse p-2">
+                <h5 className="waves-effect waves-light">Add an excuse<i className="fas fa-angle-double-right ml-2"></i></h5>
                 </a>
             </div>
         </div>

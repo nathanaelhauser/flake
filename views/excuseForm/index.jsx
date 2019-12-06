@@ -24,7 +24,7 @@ module.exports = props => {
           {/* pretty button */}
           <button className="btn peach-gradient" id="addEvent">Add event to calendar</button>
         </p>
-        <hr/>
+        <hr />
         <h4>|| Add an excuse to an event ||</h4>
         <div className="md-form">
           <input type="text" id="excuse" className="form-control mdb-autocomplete" />
@@ -44,14 +44,14 @@ module.exports = props => {
         </form>
         <button className="btn peach-gradient" id="addExcuse">Add excuse to an event</button>
       </form>
-      <hr/>
+      <hr />
 
 
       <div className="row">
         <table>
           <thead>
             <th>Excuses</th>
-            <br/><br/>
+            <br /><br />
             <th></th>
           </thead>
           <tbody id="excuses">
