@@ -14,6 +14,10 @@ document.addEventListener('click', e => {
       .catch(e => console.error(e))
   }
 
+  if (e.target.id === "homeLink") {
+    window.location = `http://${window.location.host}/Home?google_id=${localStorage.getItem('google_id')}`
+  }
+
   // For any page with the navbar
   //  if the signout link is clicked
   if (e.target.id === "signout") {
