@@ -10,21 +10,10 @@ module.exports = props => {
 
       <form>
         <p>
-          <h4>|| Add an event to your Google Calendar ||</h4>
-          <label htmlFor="event">Event: </label>
-          <br />
-          <input type="text" name="event" id="event" />
+          <h4>|| Generate random excuse ||</h4>
+          <button className="btn peach-gradient" id="randomBtn">GENERATE</button>
         </p>
-        <p>
-          <label htmlFor="date">Date: </label>
-          <br />
-          <input type="date" name="date" id="date" />
-        </p>
-        <p>
-          {/* pretty button */}
-          <button className="btn peach-gradient" id="addEvent">Add event to calendar</button>
-        </p>
-        <hr/>
+        <hr/> 
         <h4>|| Add an excuse to an event ||</h4>
         <div className="md-form">
           <input type="text" id="excuse" className="form-control mdb-autocomplete" />
@@ -48,15 +37,17 @@ module.exports = props => {
 
 
       <div className="row">
+        <div>
         <table>
           <thead>
-            <th>Excuses</th>
+            <th> Recent excuses</th>
             <br/><br/>
             <th></th>
           </thead>
           <tbody id="excuses">
           </tbody>
         </table>
+        </div>
       </div>
 
     </div>
