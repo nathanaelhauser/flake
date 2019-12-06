@@ -1,5 +1,4 @@
 const { Google } = require('../controllers')
-const { User } = require('../models')
 
 module.exports = app => {
 
@@ -13,44 +12,20 @@ module.exports = app => {
         .then(userData => res.render('Home', userData))
         .catch(e => console.log(e))
     } else {
-      User.findOne({ where: { google_id: req.query['google_id'] } })
-        .then(({ dataValues: userData }) => 
-          res.render('Home', userData))
-        .catch(e => console.log(e))
+      res.render('Home')
     }
   })
 
   app.get('/About', (req, res) => {
-    if (req.query['google_id']) {
-      User.findOne({ where: { google_id: req.query['google_id'] }})
-        .then(({ dataValues: userData }) =>
-          res.render('About', userData))
-        .catch(e => console.log(e))
-    } else {
-      res.render('About')
-    }
+    res.render('About')
   })
 
   app.get('/Excuses',(req, res) => {
-    if (req.query['google_id']) {
-      User.findOne({ where: { google_id: req.query['google_id'] }})
-        .then(({ dataValues: userData }) =>
-          res.render('Excuses', userData))
-        .catch(e => console.log(e))
-    } else {
-      res.render('Excuses')
-    }
+    res.render('Excuses')
   })
 
   app.get('/Calendar',(req, res) => {
-    if (req.query['google_id']) {
-      User.findOne({ where: { google_id: req.query['google_id'] }})
-        .then(({ dataValues: userData }) =>
-          res.render('Calendar', userData))
-        .catch(e => console.log(e))
-    } else {
-      res.render('Calendar')
-    }
+    res.render('Calendar')
   })
 
 }

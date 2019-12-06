@@ -1,39 +1,11 @@
 document.addEventListener('click', e => {
-  
-  // Login button on the index page
-  if (e.target.id === "customBtn") {
-    console.log('customBtn')
-    const location = `https://${window.location.host}/`
-    // Obtain a google authentication url by
-    //  posting current location to server at
-    //  google/auth route
-    axios.post(`${location}google/auth`, { location })
-      .then(({ data }) => {
-        window.location = data.authURL
-      })
-      .catch(e => console.error(e))
-  }
 
-  if (e.target.classList.contains("homeLink")) {
-    window.location = `http://${window.location.host}/Home?google_id=${localStorage.getItem('google_id')}`
-  }
-  if (e.target.classList.contains("calendarLink")) {
-    window.location = `http://${window.location.host}/Calendar?google_id=${localStorage.getItem('google_id')}`
-  }
-  if (e.target.classList.contains("excusesLink")) {
-    window.location = `http://${window.location.host}/Excuses?google_id=${localStorage.getItem('google_id')}`
-  }
-  if (e.target.classList.contains("aboutLink")) {
-    window.location = `http://${window.location.host}/About?google_id=${localStorage.getItem('google_id')}`
-  }
-
-  // For any page with the navbar
-  //  if the signout link is clicked
+  // If navbar signout is clicked
   if (e.target.id === "signout") {
     console.log('signing user out')
     localStorage.removeItem('google_id')
     // Go back to index page
-    window.location = `http://${window.location.host}`
+    window.location = `/`
   }
 })
 

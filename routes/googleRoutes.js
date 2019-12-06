@@ -14,14 +14,12 @@ module.exports = app => {
     .catch(e => console.log(e))
   })
 
-  // Using web location provided by client to make redirectURL
-  //  get an authURL from google
-  app.post('/google/auth', (req, res) => {
+  // Get authorization URL from google using redirect URL
+  app.get('/google/auth', (req, res) => {
     console.log('getting authorization')
-    Google.getAuthURL(req.body.location)
-      .then(authURL => {
-        res.send({authURL})
-      })
+    // `${req.protocol}://${req.get('host')}/Home` is redirect URL
+    Google.getAuthURL(`${req.protocol}://${req.get('host')}/Home`)
+      .then(authURL => res.send(authURL))
       .catch(e => console.log(e))
   })
 

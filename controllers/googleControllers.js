@@ -26,9 +26,9 @@ module.exports = {
   },
 
   // Get an authURL from google
-  async getAuthURL(currentURL) {
+  async getAuthURL(redirect_uri) {
     return await client.generateAuthUrl({
-      redirect_uri: `${currentURL}Home`,
+      redirect_uri,
       scope: SCOPES,
       prompt: 'consent',
       access_type: 'offline'
