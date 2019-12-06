@@ -3,7 +3,7 @@ document.addEventListener('click', e => {
   // Login button on the index page
   if (e.target.id === "customBtn") {
     console.log('customBtn')
-    const location = `http://${window.location.host}/`
+    const location = `https://${window.location.host}/`
     // Obtain a google authentication url by
     //  posting current location to server at
     //  google/auth route
