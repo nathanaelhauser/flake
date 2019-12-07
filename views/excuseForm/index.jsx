@@ -1,4 +1,5 @@
 const React = require('react')
+const RandomExcuseCard = require('../RandomExcuseCard')
 
 module.exports = props => {
   return (
@@ -7,29 +8,8 @@ module.exports = props => {
       <div className="row">
         <h1 className="excuseHeader"> EXCUSES</h1>
       </div>
-
+      <RandomExcuseCard />
       <form>
-        <p>
-          <h4>|| Generate random excuse ||</h4>
-          <div className="md-form">
-          <input type="text" id="randomExcuse" className="form-control mdb-autocomplete" />
-          <label htmlFor="randomExcuse" className="active">What is your excuse?</label>
-        </div>
-
-        <form className="range-field my-4 w-25">
-          <label htmlFor="severity">How intense of an excuse do you want?</label>
-          <div className="row justify-content-between">
-            <div className="col-1 slider1" id="randomOne">1</div>
-            <div className="col-1 slider" id="randomTwo">2</div>
-            <div className="col-1 slider" id="randomThree">3</div>
-            <div className="col-1 slider" id="randomFour">4</div>
-            <div className="col-1 slider5" id="randomFive">5</div>
-          </div>
-          <input type="range" className="custom-range" min="1" max="5" id="randomSeverity" />
-        </form>
-          <button className="btn peach-gradient" id="randomBtn">GENERATE</button>
-        </p>
-
         <hr/> 
 
           <h4>|| Add an excuse to an event ||</h4>
@@ -51,10 +31,6 @@ module.exports = props => {
         </form>
         <button className="btn peach-gradient" id="addExcuse">Add excuse to an event</button>
       </form>
-<<<<<<< HEAD
-      <hr />
-=======
->>>>>>> 1d07eb4e8633527399f0af4769325a829701e3c1
 
       <hr/>
 
@@ -62,13 +38,8 @@ module.exports = props => {
         <div>
         <table>
           <thead>
-<<<<<<< HEAD
-            <th>Excuses</th>
-            <br /><br />
-=======
             <th>Recent excuses</th>
             <br/><br/>
->>>>>>> 1d07eb4e8633527399f0af4769325a829701e3c1
             <th></th>
           </thead>
           <tbody id="excuses">
