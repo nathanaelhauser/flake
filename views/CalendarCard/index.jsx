@@ -8,8 +8,8 @@ module.exports = props => {
                 <h2 className="card-header-title mb-3">{props.event}</h2>
                     <p className="mb-0">{props.eventDate}</p>
             </div>
-            <div classNameName="card-body card-body-cascade text-center">
-                <p classNameName="card-text">{props.excuse}</p>
+            <div className="card-body card-body-cascade text-center">
+                <p className="card-text">{props.excuse}</p>
                 {
                     
                 }
