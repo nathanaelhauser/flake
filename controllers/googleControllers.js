@@ -1,9 +1,10 @@
 const axios = require('axios')
 const { User } = require('../models')
 const { google } = require('googleapis')
-const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URL, REDIRECT_HEROKU } = process.env
+const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URL } = process.env
 const SCOPES = ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/calendar']
-const client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_HEROKU | REDIRECT_URL)
+const client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, 'https://tranquil-reef-16365.herokuapp.com/Home')
+// const client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL)
 
 module.exports = {
 
