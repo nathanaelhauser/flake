@@ -1,5 +1,4 @@
 const { Google } = require('../controllers')
-const { User } = require('../models')
 
 module.exports = app => {
 
@@ -13,10 +12,7 @@ module.exports = app => {
         .then(userData => res.render('Home', userData))
         .catch(e => console.log(e))
     } else {
-      User.findOne({ where: { google_id: req.query['google_id'] } })
-        .then(({ dataValues: userData }) => 
-          res.render('Home', userData))
-        .catch(e => console.log(e))
+      res.render('Home')
     }
   })
 
@@ -30,9 +26,6 @@ module.exports = app => {
 
   app.get('/Calendar',(req, res) => {
     res.render('Calendar')
-  })
-  app.get('/test',(req, res) => {
-    res.render('test')
   })
 
 }
