@@ -1,4 +1,4 @@
-const React = require('react')
+const React = require('./node_modules/react')
 const RandomExcuseCard = require('../RandomExcuseCard')
 
 module.exports = props => {
