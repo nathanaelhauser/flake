@@ -9,9 +9,9 @@ document.querySelector('body').addEventListener('click', e => {
     // document.getElementById('randomForm').style.display = 'none'
     // document.getElementById('randomConfirm').style.display = 'block'
 
-    const severity = document.getElementById('')
+    const severity = document.getElementById('randomSeverity').value
 
-    axios.get('/excuses')
+    axios.get(`/excuses/${severity}`)
       .then(excuses => {
         console.log(excuses)
       })

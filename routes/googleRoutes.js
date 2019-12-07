@@ -19,7 +19,7 @@ module.exports = app => {
   app.get('/google/auth', (req, res) => {
     console.log('getting authorization')
     // `${req.protocol}://${req.get('host')}/Home` is redirect URL
-    Google.getAuthURL(`${req.protocol}://${req.get('host')}/Home`)
+    Google.getAuthURL(`https://${req.get('host')}/Home`)
       .then(authURL => res.send(authURL))
       .catch(e => console.log(e))
   })
