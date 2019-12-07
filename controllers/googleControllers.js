@@ -27,7 +27,8 @@ module.exports = {
   },
 
   // Get an authURL from google
-  async getAuthURL(redirect_uri) {
+  async getAuthURL() {
+    const redirect_uri = 'https://tranquil-reef-16365.herokuapp.com/Home'
     return await client.generateAuthUrl({
       redirect_uri,
       scope: SCOPES,
