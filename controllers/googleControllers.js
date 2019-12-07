@@ -39,16 +39,24 @@ module.exports = {
     })
   },
 
+  async getCalendars(tokens) {
+    let response = new Promise((resolve, reject) => {
+      client.setCredentials(tokens)
+      resolve(google.calendar({ version: 'v3', auth: client }).calendarList.list())
+    })
+    return response
+  },
+
   // Get calendar events from google calendar using
   //  oauth2 tokens
-  async getCalendarEvents(tokens) {
+  async getCalendarEvents(calendarId, tokens) {
     let response = new Promise((resolve, reject) => {
       // Tokens required for oauth2
       client.setCredentials(tokens)
       const calendar = google.calendar({ version: 'v3', auth: client })
       // Get events from calendar api
       calendar.events.list({
-        calendarId: 'primary',
+        calendarId,
         timeMin: (new Date()).toISOString(),
         maxResults: 10,
         singleEvents: true,

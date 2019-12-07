@@ -10,8 +10,8 @@ module.exports = app => {
   })
 
   // GET one user (read)
-  app.get('/users/:id', (req, res) => {
-    User.findOne({ where: { id: parseInt(req.params.id) } })
+  app.get('/users/:google_id', (req, res) => {
+    User.findOne({ where: { google_id: parseInt(req.params.google_id) } })
       .then(user => res.json(user))
       .catch(e => console.error(e))
   })

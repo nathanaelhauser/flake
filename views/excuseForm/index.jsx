@@ -1,6 +1,7 @@
 const React = require('react')
 const RandomExcuseCard = require('../RandomExcuseCard')
 const AddEvent = require('../AddEvent')
+const ChooseEventCard = require('../ChooseEventCard')
 
 module.exports = props => {
   return (
@@ -9,6 +10,8 @@ module.exports = props => {
       <div className="row">
         <h1 className="excuseHeader"> EXCUSES</h1>
       </div>
+      <ChooseEventCard />
+      <br/>
       <RandomExcuseCard />
       <br/>
       <AddEvent/>
