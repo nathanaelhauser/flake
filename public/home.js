@@ -1,7 +1,11 @@
 // If user isn't logged in yet,
-//  grab google_id provided by
-// server on Home page in div dataset
+//  get google_id  and username
+// in div on Home page
 if (!localStorage.getItem('google_id')) {
-  const google_id = document.getElementById('tempStorage').dataset.google_id
-  localStorage.setItem('google_id', google_id)
+  const data = document.getElementById('tempStorage').dataset
+  localStorage.setItem('google_id', data.google_id)
+  localStorage.setItem('username', data.username)
 }
+
+document.getElementById('greeting').textContent = `Hello ${localStorage.getItem('username')}! What would you like to do today?`
+

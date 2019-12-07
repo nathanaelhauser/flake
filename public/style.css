@@ -17,10 +17,9 @@
   text-align: right;
 }
 
-#customBtn{background-color:#F0C808;
-  position: fixed;
-  margin-left: 85px;
-  margin-top: 155px;
+#signin{background-color:#F0C808;
+  position: relative;
+  margin-left: 25%;
 }
 
 .landingPage {background-image: url("../../assets/background_Orange.png");
