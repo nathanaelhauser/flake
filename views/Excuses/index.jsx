@@ -24,6 +24,7 @@ module.exports = props => {
                 </div>
             </div>
             <Footer />
+            <script src="./excuses.js"></script>
         </Layout>
     )
 }
