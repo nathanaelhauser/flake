@@ -14,8 +14,17 @@ document.addEventListener('click', e => {
       .catch(e => console.error(e))
   }
 
-  if (e.target.id === "homeLink") {
+  if (e.target.classList.contains("homeLink")) {
     window.location = `http://${window.location.host}/Home?google_id=${localStorage.getItem('google_id')}`
+  }
+  if (e.target.classList.contains("calendarLink")) {
+    window.location = `http://${window.location.host}/Calendar?google_id=${localStorage.getItem('google_id')}`
+  }
+  if (e.target.classList.contains("excusesLink")) {
+    window.location = `http://${window.location.host}/Excuses?google_id=${localStorage.getItem('google_id')}`
+  }
+  if (e.target.classList.contains("aboutLink")) {
+    window.location = `http://${window.location.host}/About?google_id=${localStorage.getItem('google_id')}`
   }
 
   // For any page with the navbar

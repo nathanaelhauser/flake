@@ -8,17 +8,17 @@ module.exports = props => {
   return (
     
     <Layout>
-    <Navbar/>
-      <br/>
-      <div id ="main-container"className="container">
+
+      <Navbar />
+      <br />
+      <div className="container">
         <h1>Events</h1>
-    
-      <br/>
-      <CalendarCard event="event"/>
-    <br/>
       </div>
-            <Footer/>
-            </Layout>
-            
+      <br />
+      <CalendarCard id="calendarCard" event="event" />
+      <br />
+      <Footer />
+      <script src="./calendar.js" />
+    </Layout>
   )
 }

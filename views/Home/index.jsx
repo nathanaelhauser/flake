@@ -17,7 +17,7 @@ module.exports = props => {
 
             <div className="card-body">
               <h5 className="card-title">Create Excuse</h5>
-              <a href="http://localhost:3000/Excuses" className="stretched-link">Let's Flake!</a>
+              <a href="#" className="excusesLink stretched-link">Go somewhere</a>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@ module.exports = props => {
             <div className="card-body">
               <h5 className="card-title">View Upcoming Events</h5>
 
-              <a href="http://localhost:3000/Calendar" className="stretched-link">Let's See What were Skipping</a>
+              <a href="#" className="calendarLink stretched-link">Go somewhere</a>
             </div>
           </div>
           </div>
