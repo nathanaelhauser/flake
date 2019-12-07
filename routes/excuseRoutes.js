@@ -9,6 +9,13 @@ module.exports = app => {
       .catch(e => console.error(e))
   })
 
+  // Get all excuses with severity (read)
+  app.get('/excuses/:severity', (req, res) => {
+    Excuse.findAll({ where: { severity: req.params.severity }})
+      .then(excuses => res.json(excuses))
+      .catch(e => console.log(e))
+  })
+
   // POST one excuse (create)
   app.post('/excuses', (req, res) => {
     Excuse.create(req.body)
