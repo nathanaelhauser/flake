@@ -3,6 +3,7 @@ const Layout = require('../Layout')
 const Navbar = require('../Navbar')
 const Form = require('../ExcuseForm')
 const Footer = require('../Footer')
+const AddEvent = require('../AddEvent')
 
 module.exports = props => {
     return (
@@ -10,7 +11,7 @@ module.exports = props => {
             <Navbar />
 
             <Form />
-
+        <br/>
             <div className="container">
                 <div className="list-group">
                     {/* no excuse */}
@@ -23,7 +24,10 @@ module.exports = props => {
                     <a href="#" className="list-group-item list-group-item-action list-group-item-danger">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere praesentium voluptatum ipsa exercitationem necessitatibus libero quod neque atque aliquam, magnam explicabo error vitae repellat sed, voluptatem accusantium provident labore et.</a>
                 </div>
             </div>
+              <br/>
             <Footer />
+
+          
         </Layout>
     )
 }
