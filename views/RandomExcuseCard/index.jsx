@@ -2,10 +2,10 @@ const React = require('react')
 
 module.exports = props => {
   return (
-    <div className="card card-cascade wider">
+    <div id ="random" className="card card-cascade wider">
       <div className="view view-cascade gradient-card-header peach-gradient">
         <div className="row justify-content-center">
-          <h2 className="card-header-title text-white">|| Generate random excuse ||</h2>
+          <h2 className="card-header-title text-white">|| Generate Random Excuse ||</h2>
         </div>
       </div>
       <div className="card-body card-body-cascade text-center">

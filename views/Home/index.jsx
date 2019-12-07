@@ -1,13 +1,14 @@
 const React = require('react')
 const Layout = require('../Layout')
 const Navbar = require('../Navbar')
+const Footer = require('../Footer')
 
 module.exports = props => {
   return (
-    <Layout>
-      <Navbar />
-      <div className="container">
-        <br />
+   <Layout>
+     <Navbar/>
+     <div className= "container">
+        <br/>
         {/* Use google username to greet client */}
         <h1 id="greeting">Hello {props.username | ''}! What would You like to do today?</h1>
         <div className="row">
@@ -20,15 +21,19 @@ module.exports = props => {
             </div>
           </div>
         </div>
+
+        <br></br>
+        
           <div className="col-md-6"><div className="card">
-            <img className="card-img-top" src="https://images.idgesg.net/images/article/2019/04/google-calendar-android-100794956-large.jpg" alt="calpic" />
+            <img className="card-img-top" src="https://images.idgesg.net/images/article/2019/04/google-calendar-android-100794956-large.jpg" alt="calpic"/>
 
             <div className="card-body">
               <h5 className="card-title">View Upcoming Excuses</h5>
 
               <a href="/Calendar" className="calendarLink stretched-link">Go somewhere</a>
             </div>
-          </div></div>
+          </div>
+          </div>
 
         </div>
       </div>
