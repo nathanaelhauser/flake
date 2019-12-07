@@ -33,7 +33,7 @@ module.exports = props => {
       <AboutCard name="Arturo" excuse="Sorry I have to cancel... I'm too depressed about the state of the world to go out." image="https://ca.slack-edge.com/TKAFG5QD9-ULMK37M6G-f205369b1b63-512" role="Frontend Dev"/>
     <br/>
       <AboutCard name="Kevin" excuse="My dog, cat, and I are all throwing up right now!" image="https://ca.slack-edge.com/TKAFG5QD9-ULPF1509X-39abf41164e2-512" role="Frontend Dev"/>
-
+<br></br>
     <Footer/>
 
     </Layout>

@@ -2,7 +2,7 @@ const React = require(`react`)
 
 module.exports = props => {
   return(
-    <div className="container">
+    <div id ="add" className="container">
       <div className="card card-cascade narrower">
         <div className="view view-cascade overlay">
           <img className="card-img-top" src={props.image} alt="Card image cap" />
