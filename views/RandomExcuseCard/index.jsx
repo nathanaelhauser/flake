@@ -27,9 +27,10 @@ module.exports = props => {
             <button className="btn peach-gradient" id="randomBtn">GENERATE</button>
           </div>
         </div>
+        <br/>
         <div id="randomConfirm" className="row justify-content-center">
           <p id="randomExcuse"></p>
-          <button className="btn peach-gradient">CONFIRM</button>
+          <button id="randomAdd" className="btn peach-gradient">ADD TO EVENT</button>
         </div>
       </div>
     </div>
