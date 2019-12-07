@@ -1,4 +1,4 @@
-const React = require('./node_modules/react')
+const React = require('react')
 const RandomExcuseCard = require('../RandomExcuseCard')
 const AddEvent = require('../AddEvent')
 
