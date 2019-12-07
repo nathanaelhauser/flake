@@ -25,6 +25,6 @@ module.exports = props => {
             </a>
         </div>
     </div>
-    </div> 
+    
   )
 }
