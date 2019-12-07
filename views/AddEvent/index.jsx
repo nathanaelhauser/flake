@@ -25,7 +25,7 @@ module.exports = props => {
               <div className="col-1 slider5" id="randomFive">5</div>
             </div>
             <input type="range" className="custom-range" min="1" max="5" id="addSeverity" />
-            <button className="btn peach-gradient" id="addBtn">ADD</button>
+            <button className="btn peach-gradient" id="addBtn">ADD TO EVENT</button>
           </form>
         </div>
       </div>

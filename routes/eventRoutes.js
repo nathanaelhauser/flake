@@ -11,7 +11,7 @@ module.exports = app => {
 
   // GET events for specific user
   app.get('/events/user/:google_id', (req, res) => {
-    User.findOne({ where: { google_id: req.query['google_id'] }})
+    User.findOne({ where: { google_id: parseInt(req.query['google_id']) }})
       .then(user => console.log(user.findEvents()))
       .catch(e => console.log(e))
     // Event.findAll({ include: Excuse, where: { userId: req.params.id }})
