@@ -5,15 +5,25 @@ document.querySelector('body').addEventListener('click', e => {
 
   if (e.target.id === 'randomBtn') {
     e.preventDefault()
-    console.log('hello')
-    // document.getElementById('randomForm').style.display = 'none'
-    // document.getElementById('randomConfirm').style.display = 'block'
 
-    const severity = document.getElementById('randomSeverity').value
+    axios.get(`/excuses/${document.getElementById('randomSeverity').value}`)
+      .then(({ data }) => {
+        document.getElementById('randomConfirm').style.display = 'block'
+        document.getElementById('randomExcuse').textContent = 
+          data[Math.floor(Math.random()*(data.length-1))].excuse
+      })
+      .catch(e => console.log(e))
+  }
 
-    axios.get(`/excuses/${severity}`)
-      .then(excuses => {
-        console.log(excuses)
+  if (e.target.id === 'addBtn') {
+    e.preventDefault()
+
+    axios.post('/excuses', {
+      severity: document.getElementById('addSeverity').value,
+      excuse: document.getElementById('addExcuse').value
+    })
+      .then(() => {
+        console.log('create excuse')
       })
       .catch(e => console.log(e))
   }

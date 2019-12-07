@@ -3,6 +3,7 @@ const { User } = require('../models')
 const { google } = require('googleapis')
 const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URL } = process.env
 const SCOPES = ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/calendar']
+// THIS IS FOR HEROKU DEPLOYMENT
 // const client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, 'https://tranquil-reef-16365.herokuapp.com/Home')
 const client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL)
 
@@ -28,6 +29,7 @@ module.exports = {
 
   // Get an authURL from google
   async getAuthURL(redirect_uri) {
+    // THIS IS FOR HEROKU DEPLOYMENT
     // const redirect_uri = 'https://tranquil-reef-16365.herokuapp.com/Home'
     return await client.generateAuthUrl({
       redirect_uri,
