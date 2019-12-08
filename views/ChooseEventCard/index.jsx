@@ -21,9 +21,6 @@ module.exports = props => {
                     <br/>
                     <select id="selectEvent" className="browser-default custom-select">
                       <option selected>Choose Event</option>
-                      {/* <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option> */}
                     </select>
                 </div>
               </form>
