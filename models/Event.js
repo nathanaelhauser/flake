@@ -9,7 +9,9 @@ module.exports = (sequelize, Model, DataTypes) => {
         // userId: DataTypes.INTEGER,
         // excuseId: DataTypes.INTEGER,
         event: DataTypes.STRING,
-        calendarId: DataTypes.STRING
+        start: DataTypes.STRING,
+        end: DataTypes.STRING,
+        calendar_id: DataTypes.STRING
     }, { sequelize, modelName: 'event' })
 
     return Event

@@ -8,19 +8,27 @@ const User = require('./User.js')(sequelize, Model, DataTypes)
 
 // associations
 User.hasMany(Event, {
-  foreignKey: 'google_id'
+  foreignKey: {
+    name: 'user_id',
+    type: DataTypes.STRING
+  },
+  sourceKey: 'google_id'
 })
 Event.belongsTo(User, {
-  foreignKey: 'google_id',
-  as: 'user_id'
+  foreignKey: {
+    name: 'user_id',
+    type: DataTypes.STRING
+  },
+  sourceKey: 'google_id'
 })
 
 Excuse.hasMany(Event, {
-  foreignKey: 'id'
+  foreignKey: 'excuse_id',
+  sourceKey: 'id'
 })
 Event.belongsTo(Excuse, {
-  foreignKey: 'id',
-  as: 'excuse_id'
+  foreignKey: 'excuse_id',
+  sourceKey: 'id'
 })
 
 // module.exports = { table variables }
