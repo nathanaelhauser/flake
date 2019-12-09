@@ -18,6 +18,7 @@ module.exports = props => {
       <CalendarCard id="calendarCard" event="event" />
       <br />
       <Footer />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" />
       <script src="./calendar.js" />
     </Layout>
   )

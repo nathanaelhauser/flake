@@ -9,7 +9,7 @@ module.exports = props => {
 
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
         aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span><i
-          class="fas fa-bars fa-1x"></i></span></button>
+          className="fas fa-bars fa-1x"></i></span></button>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent15">
 
