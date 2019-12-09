@@ -9,21 +9,20 @@ module.exports = props => {
                     <p className="mb-0">{props.eventDate}</p>
             </div>
             <div className="card-body card-body-cascade text-center">
-                <p className="card-text">{props.excuse}</p>
-                {
-                    
-                }
-                <a href="#!" className="orange-text d-flex flex-row-reverse p-2">
+                {/* <p className="card-text">{props.excuse}</p> */}
+                
+                {/* <a href="#!" className="orange-text d-flex flex-row-reverse p-2">
                 <h5 className="waves-effect waves-light">Add an excuse<i className="fas fa-angle-double-right ml-2"></i></h5>
-                </a>
+                </a> */}
+                <div id="eventList" className="list-group"></div>
             </div>
         </div>
-        <div className="card-body card-body-cascade text-center">
+        {/* <div className="card-body card-body-cascade text-center">
             <p className="card-text">{props.excuse}</p>
             <a href="#!" className="orange-text d-flex flex-row-reverse p-2">
             <h5 className="waves-effect waves-light">Add an excuse<i className="fas fa-angle-double-right ml-2"></i></h5>
             </a>
-        </div>
+        </div> */}
     </div>
     
   )
