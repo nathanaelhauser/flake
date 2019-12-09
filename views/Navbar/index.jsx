@@ -4,11 +4,12 @@ module.exports = props => {
   return (
     <nav className="navbar navbar-light navbar-1 peach-gradient">
       <a> <img className= "navimg" src= "../../assets/navimage.png" alt="Flake Logo"/> </a> 
-      <a className="navbar-brand" href="#">Flake</a>
+      <a className="navbar-brand font-weight-bold" href="#">Flake</a>
 
 
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
-        aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
+        aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span><i
+          class="fas fa-bars fa-1x"></i></span></button>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent15">
 

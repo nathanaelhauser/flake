@@ -11,7 +11,7 @@ module.exports = props => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <h1>What is Flake?</h1>
+            <p className="text-center h1">What is Flake?</p>
             <p>Flake is an app that helps you live your life the way you want to. If you're tired and can't function, but you have a family event, if you are scheduled to work and there is a once in a life time opportunity you can't miss out on. That's what Flake is for. Flake helps you generate an excuse, keeps track of the excuses you used, and which events you use the excuse for, that way you aren't getting your stories mixed up and you know what you've used.</p>
           </div>
         </div>
@@ -20,7 +20,7 @@ module.exports = props => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <h1>Meet The Flakey Team</h1>
+            <p className="text-center h1">Meet The Flakey Team</p>
           </div>
         </div>
       </div>
