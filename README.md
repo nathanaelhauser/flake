@@ -14,7 +14,7 @@
 
 **Deployment:**
 
-- TBD
+- https://tranquil-reef-16365.herokuapp.com/
 
 ---
 
@@ -40,6 +40,6 @@
 
 **Acknowledgments:**
 
-- TBD
+- Calendar events powered by Google API
 
 ---
