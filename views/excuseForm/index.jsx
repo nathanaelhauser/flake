@@ -8,7 +8,10 @@ module.exports = props => {
     <div className="container">
 
       <div className="row">
-        <h1 className="excuseHeader"> EXCUSES</h1>
+        <div className="col">
+          <p className="excuseHeader text-center h1 mb-4">EXCUSES</p>
+        </div>
+        
       </div>
       <ChooseEventCard />
       <br/>
@@ -17,19 +20,20 @@ module.exports = props => {
       <AddEvent/>
 
       <div className="row">
-        <div>
-        <table>
-          <thead>
-            <th>Recent excuses</th>
-            <br/><br/>
-            <th></th>
-          </thead>
-          <tbody id="excuses">
-          </tbody>
-        </table>
+        <div className="col">
+          <p className="text-center h2 mt-4">Recent Excuses</p>
+
+          {/* <table>
+            <thead>
+              <th className="text-center h2 mb-4">Recent Excuses</th>
+              <br/><br/>
+              <th></th>
+            </thead>
+            <tbody id="excuses">
+            </tbody>
+          </table> */}
         </div>
       </div>
-
     </div>
   )
 }

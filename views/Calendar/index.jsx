@@ -12,7 +12,7 @@ module.exports = props => {
       <Navbar />
       <br />
       <div className="container">
-        <h1>Events</h1>
+        <p className="text-center h1">Events</p>
       </div>
       <br />
       <CalendarCard id="calendarCard" event="event" />
