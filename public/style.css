@@ -40,7 +40,7 @@
 
 .navimg {
   height: 50px;
-  width: 50px;
+  width: auto;
   position: center;
 }
 
