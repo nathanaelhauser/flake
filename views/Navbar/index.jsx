@@ -19,10 +19,10 @@ module.exports = props => {
             <a className="homeLink nav-link" href="/Home">Home <span className="sr-only">(current)</span></a>
           </li>
           <li className="nav-item">
-            <a className="calendarLink nav-link" href="/Calendar">Calendar</a>
+            <a className="calendarLink nav-link" href="/Excuses">Excuses</a>
           </li>
           <li className="nav-item">
-            <a className="excusesLink nav-link" href="/Excuses">Excuses</a>
+            <a className="excusesLink nav-link" href="/Calendar">Events</a>
           </li>
           <li className="nav-item">
             <a className="aboutLink nav-link" href="/About">About</a>
