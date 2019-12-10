@@ -3,7 +3,7 @@ const React = require('react')
 module.exports = props => {
   return (
     <nav className="navbar navbar-light navbar-1 peach-gradient">
-      <a> <img className= "navimg" src= "../../assets/navimage.png" alt="Flake Logo"/> </a> 
+      <a> <img className= "navimg" src= "./assets/logo_tiny.png" alt="Flake Logo"/> </a> 
       <a className="navbar-brand font-weight-bold" href="#">Flake</a>
 
 
