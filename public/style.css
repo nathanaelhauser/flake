@@ -20,16 +20,6 @@
 
 #signin {
   background-color: #F0C808;
-  position: relative;
-  margin-left: 25%;
-}
-
-.landingPage {
-  background-image: url("../../assets/background_Orange.png");
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #footer {
@@ -58,8 +48,21 @@ select {
   width: 50%;
 }
 
-.btn.peach-gradient{
+.btn.peach-gradient {
   color: black;
   font-weight: bold;
 }
 
+#index-logo {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20px;
+  width: 90%;
+}
+
+#index-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
